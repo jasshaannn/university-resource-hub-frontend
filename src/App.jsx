@@ -9,7 +9,6 @@ import {
   getTimetableHierarchy,
   getTimetableBatch,
   exportBatchCalendarIcs,
-  loginUser,
 } from './services/api'
 
 // Fallback course images for cards
@@ -92,39 +91,6 @@ function Logo({ customSrc = null, collapsed = false, className = '' }) {
   )
 }
 
-function GoogleIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" className="google-svg">
-      <path
-        fill="#4285F4"
-        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
-      />
-      <path
-        fill="#34A853"
-        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"
-      />
-      <path
-        fill="#FBBC05"
-        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"
-      />
-      <path
-        fill="#EA4335"
-        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"
-      />
-    </svg>
-  )
-}
-
-function DriveLogoIcon() {
-  return (
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" style={{ verticalAlign: 'middle' }}>
-      <path d="M7.71 3.5L1.15 15l3.43 6 6.55-11.5L7.71 3.5z" fill="#0066DA"/>
-      <path d="M16.29 3.5H7.71l6.56 11.5h8.58L16.29 3.5z" fill="#00AC47"/>
-      <path d="M22.85 15H9.72l-3.44 6h13.14l3.43-6z" fill="#EA4335"/>
-    </svg>
-  )
-}
-
 function App() {
   const [page, setPage] = useState('Dashboard')
   const [theme, setTheme] = useState(() => {
@@ -139,14 +105,6 @@ function App() {
     }
   })
 
-  const [loggedIn, setLoggedIn] = useState(() => {
-    try {
-      return localStorage.getItem('unifold_logged_in') === 'true'
-    } catch {
-      return false
-    }
-  })
-  const [isAdmin, setIsAdmin] = useState(false)
   const [search, setSearch] = useState('')
   const [saved, setSaved] = useState(() => {
     try {
@@ -415,187 +373,14 @@ function App() {
     setNotice(`🔗 Link for Batch ${selectedTtBatch} copied to clipboard!`)
   }
 
-  // Handle Login
-  const handleLoginSubmit = async (e) => {
-    e.preventDefault()
-    const email = e.target['login-email']?.value?.trim() || ''
-    const password = e.target['login-password']?.value?.trim() || ''
-
-    try {
-      const res = await loginUser(email, password)
-      if (res && res.success) {
-        setIsAdmin(res.user?.role === 'admin')
-        setLoggedIn(true)
-        localStorage.setItem('unifold_logged_in', 'true')
-        setNotice(`Welcome back, ${res.user?.name}! Connected to Google Drive campus repository.`)
-      }
-    } catch (err) {
-      setNotice(`Login note: ${err.message}`)
-      setLoggedIn(true)
-    }
-  }
-
   const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
   return (
     <div className={`app ${theme}`}>
-      {!loggedIn ? (
-        <div className="login-page">
-          <header className="login-topbar">
-            <button className="brand-btn" onClick={() => setNotice('Welcome to UniFold!')}>
-              <Logo customSrc={customLogoSrc} />
-            </button>
-
-            <div className="login-top-actions">
-              <span className="backend-status-pill online">
-                <span className="status-dot pulse" />
-                Pure Frontend (Drive Connected)
-              </span>
-
-              <button
-                className="icon-button theme-toggle-btn"
-                title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
-                onClick={toggleTheme}
-                aria-label="Toggle color theme"
-              >
-                <span className="theme-icon">{theme === 'light' ? '☾' : '☀'}</span>
-                <span className="theme-toggle-label">{theme === 'light' ? 'Dark' : 'Light'}</span>
-              </button>
-
-              <span className="login-account-cue">Already have an account?</span>
-              <button
-                className="login-top-link"
-                onClick={() => document.getElementById('login-email')?.focus()}
-              >
-                Sign in ↗
-              </button>
-            </div>
-          </header>
-
-          <main className="login-main">
-            <section className="login-intro">
-              <div className="login-eyebrow">
-                <span className="pulse-dot" />
-                <span>100% FRONTEND CAMPUS PLATFORM</span>
-              </div>
-              <h1>
-                Your campus life,<br />
-                all <em>in one place.</em>
-              </h1>
-              <p>
-                Study smarter with {stats?.totals?.resources || 467}+ real lecture notes & PYQs on Google Drive, timetable schedules for {stats?.totals?.batches || 502} batches, and {stats?.totals?.societies || 41} student societies. No server or database required.
-              </p>
-
-              <div className="login-visual">
-                <div className="login-visual-glow" />
-                <div className="login-visual-circle circle-a" />
-                <div className="login-visual-circle circle-b" />
-                <div className="login-visual-copy">
-                  <span>GOOGLE DRIVE POWERED</span>
-                  <strong>INSTANT LOAD.<br />ZERO SERVER.</strong>
-                </div>
-                <span className="visual-star">✦</span>
-              </div>
-
-              <div className="login-benefits">
-                <span className="benefit-pill">↗ {stats?.totals?.resources || 467} Google Drive Notes & PYQs</span>
-                <span className="benefit-pill">↗ {stats?.totals?.batches || 502} Live Timetable Batches</span>
-                <span className="benefit-pill">↗ {stats?.totals?.societies || 41} Campus Societies</span>
-              </div>
-            </section>
-
-            <section className="login-card">
-              <span className="section-kicker">PORTAL ACCESS</span>
-              <h2>Good to have you here<span>.</span></h2>
-              <p className="login-subtitle">
-                Sign in with your student email or explore the demo.
-              </p>
-
-              <form onSubmit={handleLoginSubmit}>
-                <label htmlFor="login-email">College Email or Admin ID</label>
-                <input
-                  id="login-email"
-                  type="text"
-                  defaultValue="student@campus.edu"
-                  placeholder="student@campus.edu"
-                  required
-                />
-
-                <div className="password-heading">
-                  <label htmlFor="login-password">Password</label>
-                  <button
-                    type="button"
-                    onClick={() => setNotice('Tip: Click "Sign into Campus OS" to enter immediately.')}
-                  >
-                    Need help?
-                  </button>
-                </div>
-                <input
-                  id="login-password"
-                  type="password"
-                  defaultValue="campus2026"
-                  placeholder="Enter your password"
-                  required
-                />
-
-                <label className="remember-label">
-                  <input type="checkbox" defaultChecked />
-                  <span>Remember this device</span>
-                </label>
-
-                <button className="login-submit" type="submit">
-                  <span>Sign into Campus OS</span>
-                  <span className="arrow-icon">↗</span>
-                </button>
-              </form>
-
-              <div className="login-divider">
-                <span />
-                <em>OR CONTINUE WITH</em>
-                <span />
-              </div>
-
-              <button
-                className="google-login"
-                type="button"
-                onClick={() => {
-                  setLoggedIn(true)
-                  localStorage.setItem('unifold_logged_in', 'true')
-                  setNotice('Signed in with Google Student ID.')
-                }}
-              >
-                <GoogleIcon />
-                <span>Continue with Google Student ID</span>
-              </button>
-
-              {notice && (
-                <div className="login-notice-banner">
-                  <span>ℹ️ {notice}</span>
-                  <button type="button" onClick={() => setNotice('')}>×</button>
-                </div>
-              )}
-
-              <p className="login-terms">
-                By signing in, you agree to UniFold's <span>Terms of Service</span> and{' '}
-                <span>Privacy Policy</span>.
-              </p>
-            </section>
-          </main>
-
-          <footer className="login-footer">
-            <span>© 2026 UniFold Campus OS. Pure Client-Side Architecture.</span>
-            <span className="footer-status">
-              <span className="status-indicator" />{' '}
-              100% FRONTEND • GOOGLE DRIVE INTEGRATED
-            </span>
-          </footer>
-        </div>
-      ) : (
-        <>
-          {/* Mobile Overlay */}
-          {mobileMenuOpen && (
-            <div className="mobile-backdrop" onClick={() => setMobileMenuOpen(false)} />
-          )}
+      {/* Mobile Overlay */}
+      {mobileMenuOpen && (
+        <div className="mobile-backdrop" onClick={() => setMobileMenuOpen(false)} />
+      )}
 
           <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
             <div className="sidebar-header">
@@ -636,25 +421,10 @@ function App() {
               <div className="help-card">
                 <div className="help-header">
                   <span className="help-icon">✦</span>
-                  <span className="help-tag">DRIVE INTEGRATED</span>
+                  <span className="help-tag">CAMPUS REPO</span>
                 </div>
-                <p>Google Drive Hub</p>
+                <p>Study Materials</p>
                 <span>{stats?.totals?.resources || 467} notes, PPTs & PYQs ready for direct access.</span>
-              </div>
-
-              <div className="profile-row">
-                <span className="avatar">{isAdmin ? 'AD' : 'JD'}</span>
-                <div className="profile-copy">
-                  <strong>{isAdmin ? 'Administrator' : 'Student Portal'}</strong>
-                  <small>{isAdmin ? 'Admin Console' : 'Computer Science • Year 3'}</small>
-                </div>
-                <button
-                  className="profile-menu"
-                  title="Profile actions"
-                  onClick={() => setNotice('Campus OS 2.0 • 100% Client-Side Architecture')}
-                >
-                  ···
-                </button>
               </div>
             </div>
           </aside>
@@ -677,7 +447,7 @@ function App() {
 
                 <span className="backend-status-pill online">
                   <span className="status-dot pulse" />
-                  Google Drive Connected
+                  System Online
                 </span>
               </div>
 
@@ -713,19 +483,6 @@ function App() {
                   <span>🔔</span>
                   <span className="bell-badge" />
                 </button>
-
-                <button
-                  className="logout-button"
-                  onClick={() => {
-                    setLoggedIn(false)
-                    setIsAdmin(false)
-                    localStorage.removeItem('unifold_logged_in')
-                    setNotice('')
-                  }}
-                >
-                  <span>Log out</span>
-                  <span className="logout-icon">↪</span>
-                </button>
               </div>
             </header>
 
@@ -750,7 +507,7 @@ function App() {
                       Make your campus<br />life <em>effortlessly organized.</em>
                     </h1>
                     <p>
-                      Access peer-verified notes directly from Google Drive, instant timetable schedules for {stats?.totals?.batches || 502} batches, and {stats?.totals?.societies || 41} student societies all directly in your browser.
+                      Access peer-verified notes, instant timetable schedules for {stats?.totals?.batches || 502} batches, and {stats?.totals?.societies || 41} student societies all directly in your browser.
                     </p>
                     <div className="banner-cta-group">
                       <button
@@ -842,10 +599,7 @@ function App() {
                         <div className="course-info">
                           <h3>{course.name}</h3>
                           <p>{course.detail}</p>
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px', marginTop: '8px' }}>
-                            <span className="drive-sync-badge">
-                              <DriveLogoIcon /> Drive Linked
-                            </span>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', marginTop: '8px' }}>
                             <button
                               className="course-action-btn"
                               onClick={() => {
@@ -925,7 +679,7 @@ function App() {
                       <button onClick={() => changePage('Study Material')}>
                         <span className="action-glyph">📄</span>
                         <div className="action-text">
-                          <strong>Browse Google Drive materials</strong>
+                          <strong>Browse study materials</strong>
                           <small>Access 467 notes, solved PYQs & PPTs</small>
                         </div>
                         <span className="action-arr">↗</span>
@@ -941,7 +695,7 @@ function App() {
                 <span className="section-kicker">EXPLORE YOUR CAMPUS</span>
                 <h1 className="inner-title">{page}<span>.</span></h1>
                 <p className="inner-description">
-                  {page === 'Study Material' && 'Handwritten lecture notes, previous year solved question papers, and curated slide decks hosted on Google Drive.'}
+                  {page === 'Study Material' && 'Handwritten lecture notes, previous year solved question papers, and curated slide decks.'}
                   {page === 'Timetable' && `Weekly lectures, tutorial batches, and lab sessions for ${stats?.totals?.batches || 502} batches across all departments.`}
                   {page === 'Societies' && `Connect with ${stats?.totals?.societies || 41} student chapters, technical clubs, motorsports, fests, and cultural societies.`}
                   {page === 'Events' && 'Browse upcoming workshops, hackathons, cultural nights, and university competitions.'}
@@ -995,12 +749,7 @@ function App() {
                             </button>
                           </div>
                           <div className="course-info">
-                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                              <span className="section-kicker">{course.code || `YEAR ${course.year}`}</span>
-                              <span className="drive-sync-badge">
-                                <DriveLogoIcon /> Google Drive
-                              </span>
-                            </div>
+                            <span className="section-kicker">{course.code || `YEAR ${course.year}`}</span>
                             <h3>{course.name}</h3>
                             <p>{course.detail}</p>
                             <button
@@ -1359,7 +1108,7 @@ function App() {
                     <div>
                       <h2>{subjectModal.name}</h2>
                       <p>
-                        {subjectModal.code ? `${subjectModal.code} • ` : ''}Year {subjectModal.year} • {subjectModal.branch || 'ALL'} • <DriveLogoIcon /> Google Drive Connected
+                        {subjectModal.code ? `${subjectModal.code} • ` : ''}Year {subjectModal.year} • {subjectModal.branch || 'ALL'}
                       </p>
                     </div>
                     <button
@@ -1374,7 +1123,7 @@ function App() {
                   <div className="modal-body">
                     {modalLoading && (
                       <p style={{ textAlign: 'center', padding: '20px', color: 'var(--muted)' }}>
-                        Accessing Google Drive resources...
+                        Fetching study resources...
                       </p>
                     )}
 
@@ -1564,14 +1313,12 @@ function App() {
               </div>
               <div className="footer-right">
                 <span className="footer-pill">
-                  ⚡ 100% FRONTEND • GOOGLE DRIVE CONNECTED
+                  ⚡ 100% FRONTEND • CAMPUS REPOSITORY
                 </span>
                 <span>MADE FOR CAMPUS LIFE.</span>
               </div>
             </footer>
           </main>
-        </>
-      )}
     </div>
   )
 }
