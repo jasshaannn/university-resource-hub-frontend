@@ -1,0 +1,16 @@
+{
+  "totals": {
+    "subjects": 23,
+    "resources": 467,
+    "societies": 41,
+    "batches": 502,
+    "years": 4
+  },
+  "countsByType": {
+    "pdf": 210,
+    "ppt": 234,
+    "notes": 4,
+    "other": 19
+  },
+  "lastUpdated": "2026-10-14T07:12:42.624Z"
+}
