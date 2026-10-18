@@ -484,9 +484,6 @@ function App() {
               <div className="page-content">
                 <section className="welcome-banner">
                   <div className="banner-copy">
-                    <span className="banner-label">
-                      <span className="banner-pulse" /> SEMESTER 5 • LIVE CONNECTED
-                    </span>
                     <h1>
                       Make your campus<br />life <em>effortlessly organized.</em>
                     </h1>

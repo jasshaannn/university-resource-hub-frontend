@@ -676,7 +676,7 @@ button {
 }
 
 .banner-copy h1 {
-  margin: 16px 0 12px;
+  margin: 0 0 14px;
   font: 700 clamp(28px, 3.2vw, 44px) / 1.15 'Manrope', sans-serif;
   letter-spacing: -1.5px;
 }
@@ -2074,7 +2074,7 @@ button {
   .banner-copy h1 {
     font: 700 clamp(20px, 4.8vw, 32px) / 1.2 'Manrope', sans-serif;
     letter-spacing: -1px;
-    margin: 12px 0 10px;
+    margin: 0 0 10px;
   }
 
   .banner-copy p {
