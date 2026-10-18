@@ -519,8 +519,6 @@ function App() {
                     <span className="art-note note-two">CAMPUS READY</span>
                     <span className="art-spark">✦</span>
                   </div>
-
-                  <span className="banner-index">SYS.V2.4 • UNIFOLD ACTIVE</span>
                 </section>
 
                 {/* Live Stats Strip */}
