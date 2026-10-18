@@ -8,7 +8,7 @@
     "description": "Official Instagram account of Thapar Institute of Engineering & Technology (TIET), Patiala, Punjab.",
     "instagram": "https://www.instagram.com/tietofficial/",
     "website": "https://www.thapar.edu",
-    "logoUrl": "https://ui-avatars.com/api/?name=TIET+Official&background=990000&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/life_at_thapar.png",
     "campus": "Patiala"
   },
   {
@@ -20,7 +20,7 @@
     "description": "Premier coding and software development society at TIET hosting major hackathons, dev bootcamps, and technical symposiums.",
     "instagram": "https://www.instagram.com/ccs_tiet/",
     "website": null,
-    "logoUrl": "https://avatars.githubusercontent.com/u/97244799?v=4",
+    "logoUrl": "/thapar_society_logos/ccs_tiet_creative_computing_society.png",
     "campus": "Patiala"
   },
   {
@@ -32,7 +32,7 @@
     "description": "Official Microsoft Learn Student Chapter at TIET empowering student developers in cloud computing, AI, and open-source software.",
     "instagram": "https://www.instagram.com/mlsc_tiet/",
     "website": null,
-    "logoUrl": "https://avatars.githubusercontent.com/u/37962209?v=4",
+    "logoUrl": "/thapar_society_logos/mlsc_tiet_ms_learn_student_chapter.png",
     "campus": "Patiala"
   },
   {
@@ -44,7 +44,7 @@
     "description": "Student Chapter of the Association for Computing Machinery (ACM), organizing competitive programming contests, workshops, and research talks.",
     "instagram": "https://www.instagram.com/acmthapar/",
     "website": null,
-    "logoUrl": "https://avatars.githubusercontent.com/u/69746706?v=4",
+    "logoUrl": "/thapar_society_logos/acmthapar_acm_student_chapter.png",
     "campus": "Patiala"
   },
   {
@@ -68,7 +68,7 @@
     "description": "Google-supported community for student developers to learn mobile, web, and cloud technologies through hands-on workshops.",
     "instagram": "https://www.instagram.com/gdg.tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=GDG+TIET&background=4285f4&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/gdg_tiet.png",
     "campus": "Patiala"
   },
   {
@@ -80,7 +80,7 @@
     "description": "Student technical and mentorship society driving software development projects, hackathons, robotics, and peer-to-peer technical guidance.",
     "instagram": "https://www.instagram.com/lead_tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=LEAD&background=6366f1&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/lead_tiet_lead_society.png",
     "campus": "Patiala"
   },
   {
@@ -104,7 +104,7 @@
     "description": "Institution of Electronics and Telecommunication Engineers student chapter organizing hardware, IoT, and embedded system challenges.",
     "instagram": "https://www.instagram.com/iete_thapar/",
     "website": null,
-    "logoUrl": "https://avatars.githubusercontent.com/u/94684727?v=4",
+    "logoUrl": "/thapar_society_logos/iete_thapar_students_forum.png",
     "campus": "Patiala"
   },
   {
@@ -152,7 +152,7 @@
     "description": "North India's biggest techno-cultural college fest featuring celebrity pro-nights, star concerts, cultural showcases, and multi-disciplinary events.",
     "instagram": "https://www.instagram.com/saturnalia.thapar/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Saturnalia&background=7c3aed&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/saturnalia_thapar_2026.png",
     "campus": "Patiala"
   },
   {
@@ -164,7 +164,7 @@
     "description": "TIET's national inter-collegiate annual sports extravaganza hosting tournaments in cricket, football, basketball, track & field, and more.",
     "instagram": "https://www.instagram.com/urja.tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Urja&background=f97316&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/urja_tiet.png",
     "campus": "Patiala"
   },
   {
@@ -176,7 +176,7 @@
     "description": "Official student body dedicated to inducting, guiding, and mentoring freshmen into collegiate life at Thapar University.",
     "instagram": "https://www.instagram.com/froshtiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Frosh&background=14b8a6&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/froshtiet_frosh_2026.png",
     "campus": "Patiala"
   },
   {
@@ -200,7 +200,7 @@
     "description": "The musical and theatrical beating heart of Thapar University, staging live music jams, theatre productions, and classical concerts.",
     "instagram": "https://www.instagram.com/mudrasociety/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=MUDRA&background=8b5cf6&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/mudrasociety.png",
     "campus": "Patiala"
   },
   {
@@ -213,6 +213,18 @@
     "instagram": "https://www.instagram.com/nox_tiet/",
     "website": null,
     "logoUrl": "https://ui-avatars.com/api/?name=NOX&background=111827&color=f43f5e&size=256&bold=true",
+    "campus": "Patiala"
+  },
+  {
+    "id": "virsa-thapar",
+    "name": "Virsa - The Punjabi Cultural Society",
+    "shortName": "Virsa",
+    "displayName": "Virsa (Virsa - The Punjabi Cultural Society)",
+    "category": "Dance & Performing Arts",
+    "description": "TIET's premier Punjabi cultural society preserving and celebrating rich folk traditions, energetic Bhangra, graceful Giddha, and festive campus showcases.",
+    "instagram": "https://www.instagram.com/virsa.thapar/?hl=en",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/virsa_thapar.svg",
     "campus": "Patiala"
   },
   {
@@ -236,7 +248,7 @@
     "description": "Hub of literature, slam poetry, book club discussions, word games, creative writing, and campus parliamentary debating.",
     "instagram": "https://www.instagram.com/litsoc.thapar/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=LitSoc&background=4338ca&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/litsoc_thapar_literary_society.png",
     "campus": "Patiala"
   },
   {
@@ -248,7 +260,7 @@
     "description": "Organizers of prestigious annual Model UN conferences, geopolitical crisis simulations, and parliamentary policy forums.",
     "instagram": "https://www.instagram.com/thaparmunsociety/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=TUMUN&background=1d4ed8&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/thaparmunsociety.png",
     "campus": "Patiala"
   },
   {
@@ -260,7 +272,7 @@
     "description": "Chartered member of Toastmasters International building public speaking eloquence, impromptu speaking skills, and executive leadership.",
     "instagram": "https://www.instagram.com/thapartoastmasters/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Toastmasters&background=772432&color=f2df74&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/thapartoastmasters.png",
     "campus": "Patiala"
   },
   {
@@ -284,7 +296,7 @@
     "description": "The official student journalism and media publication of TIET, producing newsletters, student interviews, and campus magazines.",
     "instagram": "https://www.instagram.com/echoes.tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Echoes&background=047857&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/echoes_tiet.png",
     "campus": "Patiala"
   },
   {
@@ -296,7 +308,7 @@
     "description": "Fostering entrepreneurial mindset, startup incubation, angel investor pitch sessions, and E-Summit conferences at Thapar.",
     "instagram": "https://www.instagram.com/tvc.tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=TVC&background=2563eb&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/tvc_tiet_thapar_venture_club.png",
     "campus": "Patiala"
   },
   {
@@ -320,7 +332,7 @@
     "description": "Part of Rotary International youth movement organizing blood donation camps, charity drives, and community empowerment events.",
     "instagram": "https://www.instagram.com/rotaractclubtiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Rotaract&background=d946ef&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/rotaractclubtiet.png",
     "campus": "Patiala"
   },
   {
@@ -332,7 +344,7 @@
     "description": "Pioneering environmental conservation, tree plantations, clean-up drives, sustainability hackathons, and EcoNigma fest.",
     "instagram": "https://www.instagram.com/pws_tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=PWS&background=15803d&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/pws_tiet_paryavaran_welfare_society.png",
     "campus": "Patiala"
   },
   {
@@ -344,7 +356,7 @@
     "description": "Dedicated social society teaching and mentoring underprivileged children in and around Patiala with free evening classes and drives.",
     "instagram": "https://www.instagram.com/pratigyaabhiyan/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Pratigya&background=0284c7&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/pratigya_abhiyan.png",
     "campus": "Patiala"
   },
   {
@@ -368,7 +380,7 @@
     "description": "Empowering students with financial wisdom, stock simulation contests, case study challenges, and macroeconomic research.",
     "instagram": "https://www.instagram.com/econ_tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Econ+Club&background=0f766e&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/econ_tiet_econ_club.png",
     "campus": "Patiala"
   },
   {
@@ -380,7 +392,7 @@
     "description": "Youth-led NGO wing at TIET organizing social awareness movements, youth empowerment drives, and community outreach.",
     "instagram": "https://www.instagram.com/yu.tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=Youth+United&background=f59e0b&color=ffffff&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/yu_tiet_youth_united.png",
     "campus": "Patiala"
   },
   {
@@ -392,7 +404,7 @@
     "description": "Stargazing night camps, telescope observation sessions, astrophysics workshops, and space exploration discussions.",
     "instagram": "https://www.instagram.com/taas_tiet/",
     "website": null,
-    "logoUrl": "https://ui-avatars.com/api/?name=TAAS&background=312e81&color=a5b4fc&size=256&bold=true",
+    "logoUrl": "/thapar_society_logos/taas_astronomers.png",
     "campus": "Patiala"
   },
   {
@@ -489,6 +501,270 @@
     "instagram": "https://www.instagram.com/care_tiet/",
     "website": null,
     "logoUrl": "https://ui-avatars.com/api/?name=CARE&background=065f46&color=ffffff&size=256&bold=true",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ieee-thapar",
+    "name": "IEEE Student Branch Thapar",
+    "shortName": "IEEE",
+    "displayName": "IEEE (IEEE Student Branch Thapar)",
+    "category": "Technical & Computing",
+    "description": "Official student branch of the Institute of Electrical and Electronics Engineers advancing technical excellence, robotics, and global symposiums.",
+    "instagram": "https://www.instagram.com/ieeethapar/",
+    "website": "https://ieee.thapar.edu",
+    "logoUrl": "/thapar_society_logos/ieeethapar_ieee_student_branch.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "debsoc-thapar",
+    "name": "Thapar Debating Society",
+    "shortName": "DebSoc",
+    "displayName": "DebSoc (Thapar Debating Society)",
+    "category": "Literary & Debating",
+    "description": "Premier collegiate debating chapter representing TIET at national and international Parliamentary Debates and public forums.",
+    "instagram": "https://www.instagram.com/debsoc_thapar/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/debsoc_thapar_debating_society.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "iaeste-tiet",
+    "name": "IAESTE LC Thapar",
+    "shortName": "IAESTE",
+    "displayName": "IAESTE (IAESTE LC Thapar)",
+    "category": "Student Induction & Campus Life",
+    "description": "International Association for the Exchange of Students for Technical Experience offering global paid internships and cultural exchange programmes.",
+    "instagram": "https://www.instagram.com/iaeste_tiet/",
+    "website": "https://iaeste.in",
+    "logoUrl": "/thapar_society_logos/iaeste_tiet.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "iei-tiet",
+    "name": "Institution of Engineers (India) TIET Chapter",
+    "shortName": "IEI",
+    "displayName": "IEI (Institution of Engineers India)",
+    "category": "Technical & Skill Development",
+    "description": "National engineering professional society organizing interdisciplinary design challenges, industrial visits, and technical papers.",
+    "instagram": "https://www.instagram.com/iei_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/iei_tiet.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "mars-tiet",
+    "name": "Mechatronics and Robotics Society",
+    "shortName": "MARS",
+    "displayName": "MARS (Mechatronics and Robotics Society)",
+    "category": "Technical & Computing",
+    "description": "Hub of robotics and automation enthusiasts at TIET building autonomous rovers, combat bots, and participating in Robocon.",
+    "instagram": "https://www.instagram.com/mars_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/mars_tiet.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ecc-tiet",
+    "name": "Energy Conservation Club",
+    "shortName": "ECC",
+    "displayName": "ECC (Energy Conservation Club)",
+    "category": "Environment & Sustainability",
+    "description": "Student environmental chapter promoting renewable energy, energy audits, sustainability drives, and green campus initiatives.",
+    "instagram": "https://www.instagram.com/ecc_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/ecc_tiet_energy_conservation_club.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ywc-tiet",
+    "name": "Youth Welfare Club",
+    "shortName": "YWC",
+    "displayName": "YWC (Youth Welfare Club)",
+    "category": "Community Service & Youth Leadership",
+    "description": "Engaged in student mental wellness, campus welfare advocacy, charity drives, and leadership empowerment.",
+    "instagram": "https://www.instagram.com/ywc_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/ywc_tiet_youth_welfare_club.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "team-oorja",
+    "name": "Team Oorja Electric Racing",
+    "shortName": "Team Oorja",
+    "displayName": "Team Oorja (Clean Mobility & Electric Racing)",
+    "category": "Motorsports & Automotive",
+    "description": "TIET high-performance electric vehicle student racing team designing, fabricating, and racing Formula EV prototypes.",
+    "instagram": "https://www.instagram.com/team_oorja/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/team_oorja.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "team-sammpaati",
+    "name": "Team Sammpaati Autonomous Marine",
+    "shortName": "Sammpaati",
+    "displayName": "Team Sammpaati (Autonomous Underwater Systems)",
+    "category": "Technical & Computing",
+    "description": "Student marine robotics team developing Autonomous Underwater Vehicles (AUVs) for national and international oceanic robotics challenges.",
+    "instagram": "https://www.instagram.com/team_sammpaati/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/team_sammpaati.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "sis-tiet",
+    "name": "Society of Intelligent Systems",
+    "shortName": "SIS",
+    "displayName": "SIS (Society of Intelligent Systems)",
+    "category": "Technical & Computing",
+    "description": "Focusing on Artificial Intelligence, Deep Learning, computer vision, and machine intelligence projects and research workshops.",
+    "instagram": "https://www.instagram.com/sis_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/sis_tiet_society_of_intelligent_systems.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "saic-tiet",
+    "name": "Student Alumni Interaction Cell",
+    "shortName": "SAIC",
+    "displayName": "SAIC (Student Alumni Interaction Cell)",
+    "category": "Official & University Administration",
+    "description": "Connecting TIET students with global alumni network, organizing Homecoming reunions, mentorship programs, and career summits.",
+    "instagram": "https://www.instagram.com/saic_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/saic_tiet_student_alumni_interaction_cell.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "arc-tiet",
+    "name": "Alumni Relations Cell",
+    "shortName": "ARC",
+    "displayName": "ARC (Alumni Relations Cell)",
+    "category": "Official & University Administration",
+    "description": "Fostering institutional relationships with notable alumni worldwide and organizing campus engagement initiatives.",
+    "instagram": "https://www.instagram.com/arc_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/arc_tiet_alumni_relations_cell.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ctd-tiet",
+    "name": "Centre for Training & Development",
+    "shortName": "CTD",
+    "displayName": "CTD (Centre for Training and Development)",
+    "category": "Technical & Skill Development",
+    "description": "TIET body spearheading placement preparation, soft-skills bootcamps, resume reviews, and corporate readiness sessions.",
+    "instagram": "https://www.instagram.com/ctd_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/ctd_tiet_centre_for_training_and_development.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "coe-dsai-tiet",
+    "name": "Centre of Excellence in DSAI",
+    "shortName": "COE DSAI",
+    "displayName": "COE DSAI (Data Science & AI)",
+    "category": "Technical & Computing",
+    "description": "Cutting-edge institute research hub conducting advanced training, hackathons, and industry capstone projects in AI and Data Science.",
+    "instagram": "https://www.instagram.com/coe_dsai_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/coe_dsai_tiet.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "genesoc-tiet",
+    "name": "Gene Society TIET",
+    "shortName": "GeneSoc",
+    "displayName": "GeneSoc (Biotechnology & Genetics Society)",
+    "category": "Technical & Skill Development",
+    "description": "Biotechnology and life sciences student chapter hosting wet-lab workshops, genetic engineering symposiums, and bio-hackathons.",
+    "instagram": "https://www.instagram.com/genesoc_tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/genesoc_tiet_gene_society.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "under25-tiet",
+    "name": "Under 25 Club TIET",
+    "shortName": "Under 25",
+    "displayName": "Under 25 (Youth Culture & Media Chapter)",
+    "category": "Student Induction & Campus Life",
+    "description": "Youth community collective celebrating youth creators, content producers, design, music, and pop-culture events.",
+    "instagram": "https://www.instagram.com/under25tiet/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/under25tiet.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ncc-airwing-thapar",
+    "name": "NCC Air Wing TIET",
+    "shortName": "NCC Air Wing",
+    "displayName": "NCC Air Wing (National Cadet Corps)",
+    "category": "Community Service & Youth Leadership",
+    "description": "Official National Cadet Corps air wing fostering discipline, leadership, aviation awareness, and national service.",
+    "instagram": "https://www.instagram.com/nccairwingthapar/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/nccairwingthapar.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "thapar-innovate",
+    "name": "Thapar Innovate Hub",
+    "shortName": "Innovate",
+    "displayName": "Thapar Innovate (Entrepreneurship & Incubation)",
+    "category": "Entrepreneurship & Startups",
+    "description": "Startup incubator and innovation ecosystem empowering student founders with seed grants, patent filing support, and venture mentorship.",
+    "instagram": "https://www.instagram.com/thapar_innovate/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/thapar_innovate.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "ticc-official",
+    "name": "Thapar Institute Counselling Cell",
+    "shortName": "TICC",
+    "displayName": "TICC (Student Counselling Cell)",
+    "category": "Official & University Administration",
+    "description": "Dedicated mental health and personal growth support body offering confidential counselling, mindfulness workshops, and peer listening.",
+    "instagram": "https://www.instagram.com/ticc_official/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/ticc_official_counselling_cell.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "tiet-wesquare",
+    "name": "WeSquare TIET",
+    "shortName": "WeSquare",
+    "displayName": "WeSquare (Campus Lifestyle & Networking)",
+    "category": "Student Induction & Campus Life",
+    "description": "Vibrant community wing organizing student meetups, campus engagement programs, and interactive youth sessions.",
+    "instagram": "https://www.instagram.com/tiet_wesquare/",
+    "website": null,
+    "logoUrl": "/thapar_society_logos/tiet_wesquare_thapar_module.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "lmtsm-thapar",
+    "name": "LM Thapar School of Management",
+    "shortName": "LMTSM",
+    "displayName": "LMTSM (School of Management)",
+    "category": "Finance, Economics & Consulting",
+    "description": "Business and management student body fostering leadership, case-study competitions, financial analysis, and corporate summits.",
+    "instagram": "https://www.instagram.com/lmtsm_thapar/",
+    "website": "https://lmtsm.thapar.edu",
+    "logoUrl": "/thapar_society_logos/lmtsm_thapar_school_of_management.png",
+    "campus": "Patiala"
+  },
+  {
+    "id": "thaparslas",
+    "name": "Thapar School of Liberal Arts & Sciences",
+    "shortName": "TSLAS",
+    "displayName": "TSLAS (Liberal Arts & Sciences)",
+    "category": "Literary & Debating",
+    "description": "Multidisciplinary academic collective organizing philosophical discourse, creative writing showcases, and liberal arts colloquiums.",
+    "instagram": "https://www.instagram.com/thaparslas/",
+    "website": "https://tslas.thapar.edu",
+    "logoUrl": "/thapar_society_logos/thaparslas_liberal_arts_and_sciences.png",
     "campus": "Patiala"
   }
 ]

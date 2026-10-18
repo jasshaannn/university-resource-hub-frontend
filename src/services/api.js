@@ -1,6 +1,6 @@
 // UniFold Pure Frontend Data Service
 // Zero Backend Required: Powered by pre-extracted Google Drive resources,
-// university timetable schedules for 500+ batches, and 41 campus societies.
+// university timetable schedules for 500+ batches, and 42 campus societies.
 
 import subjectsData from '../data/subjects.json';
 import societiesData from '../data/societies.json';

@@ -23,10 +23,19 @@ const courseImages = [
 ]
 
 const eventsList = [
-  { id: 1, day: '18', month: 'OCT', name: 'Design Week Showcase', society: 'Design Society', time: '4:00 PM', location: 'Hall B' },
-  { id: 2, day: '21', month: 'OCT', name: 'CodeSprint 2026 Hackathon', society: 'Creative Computing Society', time: '11:00 AM', location: 'Lab 4' },
-  { id: 3, day: '24', month: 'OCT', name: 'Acoustic Open Mic Night', society: 'Cultural Society', time: '6:30 PM', location: 'Amphitheater' },
-  { id: 4, day: '29', month: 'OCT', name: 'Microsoft Azure Cloud Workshop', society: 'Microsoft Learn Student Chapter (MLSC)', time: '2:00 PM', location: 'Seminar Hall 1' },
+  {
+    id: 1,
+    day: '21-23',
+    month: 'NOV',
+    name: 'Saturnalia - Thapar Techno Fest (51st Edition)',
+    society: 'TIET Flagship Fest',
+    handle: '@saturnalia.thapar',
+    instagram: 'https://www.instagram.com/saturnalia.thapar/',
+    logo: '/thapar_society_logos/saturnalia_thapar_2026.png',
+    time: '21st - 23rd November',
+    location: 'TIET Campus, Patiala',
+    description: "North India's largest annual techno-cultural college fest featuring celebrity pro-nights, star concerts, cultural showcases, tech exhibitions, and national hackathons.",
+  },
 ]
 
 function formatFileSize(bytes) {
@@ -416,17 +425,6 @@ function App() {
                   ))}
               </div>
             ))}
-
-            <div className="sidebar-bottom">
-              <div className="help-card">
-                <div className="help-header">
-                  <span className="help-icon">✦</span>
-                  <span className="help-tag">CAMPUS REPO</span>
-                </div>
-                <p>Study Materials</p>
-                <span>{stats?.totals?.resources || 467} notes, PPTs & PYQs ready for direct access.</span>
-              </div>
-            </div>
           </aside>
 
           <main className="main-area">
@@ -444,11 +442,6 @@ function App() {
                   <span className="crumb-sep">/</span>
                   <span className="crumb-active">{page}</span>
                 </div>
-
-                <span className="backend-status-pill online">
-                  <span className="status-dot pulse" />
-                  System Online
-                </span>
               </div>
 
               <div className="top-actions">
@@ -474,15 +467,6 @@ function App() {
                 >
                   {theme === 'light' ? '☾' : '☀'}
                 </button>
-
-                <button
-                  className="icon-button notification-button"
-                  title="Notifications"
-                  onClick={() => setNotice(`All systems online. ${subjects.length} subjects and ${stats?.totals?.resources || 467} resources available.`)}
-                >
-                  <span>🔔</span>
-                  <span className="bell-badge" />
-                </button>
               </div>
             </header>
 
@@ -507,7 +491,7 @@ function App() {
                       Make your campus<br />life <em>effortlessly organized.</em>
                     </h1>
                     <p>
-                      Access peer-verified notes, instant timetable schedules for {stats?.totals?.batches || 502} batches, and {stats?.totals?.societies || 41} student societies all directly in your browser.
+                      Access peer-verified notes, instant timetable schedules for {stats?.totals?.batches || 502} batches, and {stats?.totals?.societies || 42} student societies all directly in your browser.
                     </p>
                     <div className="banner-cta-group">
                       <button
@@ -647,9 +631,32 @@ function App() {
                           <span className="event-month">{event.month}</span>
                           <strong className="event-day">{event.day}</strong>
                         </div>
+                        {event.logo && (
+                          <img
+                            src={event.logo}
+                            alt={event.name}
+                            className="event-logo-img"
+                          />
+                        )}
                         <div className="event-info">
                           <strong>{event.name}</strong>
-                          <span className="event-society-tag">{event.society} • {event.location}</span>
+                          <div className="event-meta-row">
+                            <span className="event-society-tag">{event.society}</span>
+                            {event.handle && (
+                              <a
+                                href={event.instagram}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="event-handle-pill"
+                                title={`Follow ${event.handle} on Instagram`}
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <span className="insta-glyph">📸</span> {event.handle} ↗
+                              </a>
+                            )}
+                            <span className="event-dot-sep">•</span>
+                            <span className="event-loc-tag">{event.location}</span>
+                          </div>
                         </div>
                         <span className="event-time">{event.time}</span>
                       </div>
@@ -672,7 +679,7 @@ function App() {
                         <span className="action-glyph">♧</span>
                         <div className="action-text">
                           <strong>Find campus societies</strong>
-                          <small>Explore 41 technical clubs, fests & cultural wings</small>
+                          <small>Explore {stats?.totals?.societies || societiesList.length || 42} technical clubs, fests & cultural wings</small>
                         </div>
                         <span className="action-arr">↗</span>
                       </button>
@@ -680,7 +687,7 @@ function App() {
                         <span className="action-glyph">📄</span>
                         <div className="action-text">
                           <strong>Browse study materials</strong>
-                          <small>Access 467 notes, solved PYQs & PPTs</small>
+                          <small>Access {stats?.totals?.resources || 467} notes, solved PYQs & PPTs</small>
                         </div>
                         <span className="action-arr">↗</span>
                       </button>
@@ -697,7 +704,7 @@ function App() {
                 <p className="inner-description">
                   {page === 'Study Material' && 'Handwritten lecture notes, previous year solved question papers, and curated slide decks.'}
                   {page === 'Timetable' && `Weekly lectures, tutorial batches, and lab sessions for ${stats?.totals?.batches || 502} batches across all departments.`}
-                  {page === 'Societies' && `Connect with ${stats?.totals?.societies || 41} student chapters, technical clubs, motorsports, fests, and cultural societies.`}
+                  {page === 'Societies' && `Connect with ${stats?.totals?.societies || societiesList.length || 42} student chapters, technical clubs, motorsports, fests, and cultural societies.`}
                   {page === 'Events' && 'Browse upcoming workshops, hackathons, cultural nights, and university competitions.'}
                 </p>
 
@@ -791,22 +798,50 @@ function App() {
                     {eventsList.map((event) => {
                       const isRsvp = rsvps.includes(event.id)
                       return (
-                        <div className="event-row" key={event.id || event.name}>
+                        <div className="event-row full-event-row" key={event.id || event.name}>
                           <div className="event-date">
                             <span className="event-month">{event.month}</span>
                             <strong className="event-day">{event.day}</strong>
                           </div>
+                          {event.logo && (
+                            <img
+                              src={event.logo}
+                              alt={event.name}
+                              className="event-logo-img event-logo-large"
+                            />
+                          )}
                           <div className="event-info">
                             <strong>{event.name}</strong>
-                            <span className="event-society-tag">{event.society} • {event.location}</span>
+                            <div className="event-meta-row">
+                              <span className="event-society-tag">{event.society}</span>
+                              {event.handle && (
+                                <a
+                                  href={event.instagram}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="event-handle-pill"
+                                  title={`Follow ${event.handle} on Instagram`}
+                                  onClick={(e) => e.stopPropagation()}
+                                >
+                                  <span className="insta-glyph">📸</span> {event.handle} ↗
+                                </a>
+                              )}
+                              <span className="event-dot-sep">•</span>
+                              <span className="event-loc-tag">{event.location}</span>
+                            </div>
+                            {event.description && (
+                              <p className="event-desc">{event.description}</p>
+                            )}
                           </div>
-                          <span className="event-time">{event.time}</span>
-                          <button
-                            className={`rsvp-button ${isRsvp ? 'active' : ''}`}
-                            onClick={() => toggleRsvp(event.id, event.name)}
-                          >
-                            {isRsvp ? '✓ Confirmed' : 'RSVP'}
-                          </button>
+                          <div className="event-actions-col">
+                            <span className="event-time">{event.time}</span>
+                            <button
+                              className={`rsvp-button ${isRsvp ? 'active' : ''}`}
+                              onClick={() => toggleRsvp(event.id, event.name)}
+                            >
+                              {isRsvp ? '✓ Confirmed' : 'RSVP'}
+                            </button>
+                          </div>
                         </div>
                       )
                     })}
@@ -1038,12 +1073,22 @@ function App() {
 
                           <div className="society-header-row">
                             {soc.logoUrl ? (
-                              <img
-                                src={soc.logoUrl}
-                                alt={soc.name}
-                                className="society-logo-img"
-                                onError={(e) => { e.target.style.display = 'none' }}
-                              />
+                              <>
+                                <img
+                                  src={soc.logoUrl}
+                                  alt={soc.name}
+                                  className="society-logo-img"
+                                  onError={(e) => {
+                                    e.target.style.display = 'none'
+                                    if (e.target.nextElementSibling) {
+                                      e.target.nextElementSibling.style.display = 'flex'
+                                    }
+                                  }}
+                                />
+                                <div className="society-logo-fallback" style={{ display: 'none' }}>
+                                  {(soc.shortName || soc.name).slice(0, 2).toUpperCase()}
+                                </div>
+                              </>
                             ) : (
                               <div className="society-logo-fallback">
                                 {(soc.shortName || soc.name).slice(0, 2).toUpperCase()}
@@ -1068,8 +1113,11 @@ function App() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="society-action-link instagram"
+                                title={`Open ${soc.name} Instagram profile`}
                               >
-                                <span>Instagram ↗</span>
+                                <span>
+                                  📸 {soc.shortName === 'Saturnalia' ? '@saturnalia.thapar' : (soc.instagram.match(/instagram\.com\/([^/?#]+)/)?.[1] ? `@${soc.instagram.match(/instagram\.com\/([^/?#]+)/)[1]}` : 'Instagram')} ↗
+                                </span>
                               </a>
                             ) : null}
 
@@ -1312,9 +1360,6 @@ function App() {
                 <span>The Modern Student Campus Platform.</span>
               </div>
               <div className="footer-right">
-                <span className="footer-pill">
-                  ⚡ 100% FRONTEND • CAMPUS REPOSITORY
-                </span>
                 <span>MADE FOR CAMPUS LIFE.</span>
               </div>
             </footer>
